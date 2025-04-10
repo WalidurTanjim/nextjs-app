@@ -1,6 +1,6 @@
-import Link from "next/link";
+const ServiceDetailsPage = ({ params }) => {
+    const id = params.id;
 
-const ServicesPage = () => {
     const data = [
         {
             "_id": "1",
@@ -39,31 +39,23 @@ const ServicesPage = () => {
         }
     ]
 
-    return (
-        <section className="services-page">
-            <h1 className="text-center text-slate-800 text-2xl font-medium">Services page</h1>
+    const existData = data.find(service => service._id === id);
 
-            <div className="my-5 grid gap-5 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {
-                    data?.map(service => {
-                        const { _id, name, title, description, image } = service;
-
-                        return (
-                            <Link href={`/services/${_id}`}>
-                                <div key={_id} className="service group border border-gray-300 rounded-xl p-4 hover:shadow-md">
-                                    <img src={image} alt="Service Image" className="w-full rounded-md h-[145px] border border-gray-400" />
-
-                                    <div className="mt-3">
-                                        <h1 className="text-slate-600 font-semibold group-hover:text-gray-900">{title}</h1>
-                                    </div>
-                                </div>
-                            </Link>
-                        )
-                    })
-                }
-            </div>
-        </section>
-    );
+    if(existData){
+        return (
+            <section className='service'>
+                <h1  className="text-center text-slate-800 text-2xl font-medium">Service Details page: {id}</h1>
+    
+                <div className="my-5">
+                    <img src={existData?.image} alt="Service Image" className="w-full h-[250px] md:h-[400px] rounded-md" />
+    
+                    <div className="mt-5">
+                        <h1 className="text-2xl font-medium text-slate-700">{existData?.title}</h1>
+                    </div>
+                </div>
+            </section>
+        );
+    }
 };
 
-export default ServicesPage;
+export default ServiceDetailsPage;
