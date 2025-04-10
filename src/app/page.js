@@ -1,9 +1,10 @@
 import Image from "next/image";
+import SectionTitle from "./components/SectionTitle/SectionTitle";
 
 export default function Home() {
   return (
     <section>
-      <h1>Hello Next World!</h1>
+      <SectionTitle title="Hello Next World!" />
     </section>
   );
 }

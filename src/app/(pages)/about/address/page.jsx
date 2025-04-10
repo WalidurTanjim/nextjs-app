@@ -1,7 +1,9 @@
+import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
+
 const AddressPage = () => {
     return (
         <section className="address-page">
-            <h1>Address page</h1>
+            <SectionTitle title="Address Page" />
         </section>
     );
 };

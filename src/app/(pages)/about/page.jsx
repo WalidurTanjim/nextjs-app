@@ -1,5 +1,6 @@
 "use client"
 
+import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -8,7 +9,7 @@ const AboutPage = () => {
 
     return (
         <section className='about-page'>
-            <h1 className="text-center font-medium text-2xl">About page</h1>
+            <SectionTitle title="About Page" />
 
             <div className="my-5 flex gap-5 justify-center items-center text-sm">
                 <Link href={'/about/address'}>

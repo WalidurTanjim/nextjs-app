@@ -1,3 +1,4 @@
+import SectionTitle from "@/app/components/SectionTitle/SectionTitle";
 import Link from "next/link";
 
 const ServicesPage = () => {
@@ -41,7 +42,7 @@ const ServicesPage = () => {
 
     return (
         <section className="services-page">
-            <h1 className="text-center text-slate-800 text-2xl font-medium">Services page</h1>
+            <SectionTitle title="Services page" />
 
             <div className="my-5 grid gap-5 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {

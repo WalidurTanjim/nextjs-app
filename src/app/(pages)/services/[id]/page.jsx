@@ -1,5 +1,5 @@
 const ServiceDetailsPage = ({ params }) => {
-    const id = params.id;
+    const id = params?.id;
 
     const data = [
         {
@@ -39,7 +39,7 @@ const ServiceDetailsPage = ({ params }) => {
         }
     ]
 
-    const existData = data.find(service => service._id === id);
+    const existData = data?.find(service => service._id === id);
 
     if(existData){
         return (
