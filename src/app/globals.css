@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
-/* :root {
+:root {
   --background: #ffffff;
   --foreground: #171717;
-} */
+}
+
+.common_heading{
+  font-size: 3rem;
+  font-weight: 500;
+  color: brown;
+  text-align: center;
+  padding: 25px 0;
+}

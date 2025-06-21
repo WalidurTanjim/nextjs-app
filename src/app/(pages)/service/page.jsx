@@ -1,6 +1,8 @@
+import style from './service.module.css';
+
 const Service = () => {
     return (
-        <h1>This is service page.</h1>
+        <h1 className={style.common_heading}>This is service page.</h1>
     )
 }
 
